@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Pembelajaran PAI - Ikhlas</title>
+<style>
+:root {
+  --navy: #123047;
+  --teal: #087e8b;
+  --mint: #dff7ef;
+  --gold: #f4bd50;
+  --paper: #f6fafb;
+}
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--paper);
+  color: #203342;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(120deg,#123047,#087e8b);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+header h1 { font-size: 36px; }
+
+nav {
+  background: white;
+  padding: 12px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+nav button {
+  border: none;
+  padding: 12px 16px;
+  margin: 4px;
+  border-radius: 10px;
+  background: #dff7ef;
+  color: #123047;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+section { display: none; }
+section.active { display: block; }
+
+.card {
+  background: white;
+  padding: 22px;
+  margin: 15px 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px #0001;
+}
+
+h2 { color: #123047; }
+
+.action {
+  background: #087e8b;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 13px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f6fafb;
+}
+
+.option.correct { background: #d9f5e5; }
+.option.wrong { background: #ffe1e1; }
+
+.feedback {
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #607483;
+}
+
+@media(max-width:600px) {
+  header h1 { font-size: 26px; }
+  nav button { padding: 9px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>BELAJAR IKHLAS</h1>
+  <h2 style="color:white">
+    Hati Tulus, Amal Berkualitas
+  </h2>
+  <p>PAI dan Budi Pekerti - Kelas VII</p>
+  <p>SMP Negeri 13 Semarang</p>
+</header>
+
+<nav>
+  <button onclick="buka('beranda')">Beranda</button>
+  <button onclick="buka('materi')">Materi</button>
+  <button onclick="buka('dalil')">Dalil</button>
+  <button onclick="buka('game')">Game</button>
+  <button onclick="buka('evaluasi')">Evaluasi</button>
+</nav>
+
+<main>
+
+<section id="beranda" class="active">
+  <div class="card">
+    <h2>Assalamu'alaikum!</h2>
+    <p>
+      Selamat datang di media pembelajaran
+      interaktif PAI materi Ikhlas.
+    </p>
+    <p>
+      Mari belajar memahami ikhlas dan
+      membiasakannya dalam kehidupan sehari-hari.
+    </p>
+    <button class="action"
+      onclick="buka('materi')">
+      Mulai Belajar
+    </button>
+  </div>
+</section>
+
+<section id="materi">
+  <h2>Materi Pembelajaran</h2>
+
+  <div class="card">
+    <h3>1. Pengertian Ikhlas</h3>
+    <p>
+      Ikhlas adalah melakukan amal atau kebaikan
+      dengan niat tulus karena Allah Swt.,
+      bukan untuk mencari pujian atau imbalan
+      dari manusia.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>2. Ciri-ciri Ikhlas</h3>
+    <ul>
+      <li>Berbuat baik karena Allah Swt.</li>
+      <li>Tidak mengharapkan pujian.</li>
+      <li>Tetap berbuat baik meskipun tidak dilihat.</li>
+      <li>Rendah hati.</li>
+      <li>Jujur dan bertanggung jawab.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>3. Contoh Ikhlas</h3>
+    <ul>
+      <li>Membantu teman belajar.</li>
+      <li>Bersedekah dengan tulus.</li>
+      <li>Melaksanakan piket kelas.</li>
+      <li>Mengembalikan barang yang ditemukan.</li>
+      <li>Mengerjakan tugas dengan sungguh-sungguh.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>4. Perbedaan Ikhlas dan Riya</h3>
+    <p><b>Ikhlas:</b> Berbuat baik karena Allah Swt.</p>
+    <p><b>Riya:</b> Berbuat baik dengan tujuan memperoleh pujian manusia.</p>
+  </div>
+</section>
+
+<section id="dalil">
+  <h2>Dalil tentang Ikhlas</h2>
+
+  <div class="card">
+    <h3>QS. Al-Bayyinah ayat 5</h3>
+    <p style="font-size:25px;text-align:right">
+      وَمَآ أُمِرُوٓا۟ إِلَّا لِيَعْبُدُوا۟
+      ٱللَّهَ مُخْلِصِينَ لَهُ ٱلدِّينَ
+    </p>
+    <p>
+      Maknanya: Manusia diperintahkan untuk
+      menyembah Allah dengan memurnikan
+      ketaatan kepada-Nya.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Hadis tentang Niat</h3>
+    <p>
+      Sesungguhnya amal perbuatan bergantung
+      pada niatnya.
+    </p>
+    <p>HR. Bukhari dan Muslim.</p>
+  </div>
+</section>
+
+<section id="game">
+  <h2>GAME EDUKASI IKHLAS</h2>
+
+  <div class="card">
+    <h3>Ikhlas atau Bukan Ikhlas?</h3>
+    <p id="soal"></p>
+
+    <div id="pilihan"></div>
+
+    <p id="hasil" class="feedback"></p>
+
+    <button class="action"
+      onclick="berikutnya()">
+      Soal Berikutnya
+    </button>
+
+    <h3 id="skor">Skor: 0</h3>
+  </div>
+</section>
+
+<section id="evaluasi">
+  <h2>Evaluasi Pembelajaran</h2>
+
+  <div class="card">
+    <p>1. Jelaskan pengertian ikhlas!</p>
+    <textarea></textarea>
+
+    <p>2. Sebutkan tiga contoh perilaku ikhlas!</p>
+    <textarea></textarea>
+
+    <p>3. Apa perbedaan ikhlas dan riya?</p>
+    <textarea></textarea>
+
+    <p>4. Mengapa niat penting dalam beramal?</p>
+    <textarea></textarea>
+
+    <br><br>
+    <button class="action"
+      onclick="window.print()">
+      Cetak Jawaban
+    </button>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Media Pembelajaran PAI dan Budi Pekerti<br>
+  SMP Negeri 13 Semarang
+</footer>
+
+<script>
+function buka(id) {
+  document.querySelectorAll('main section')
+    .forEach(s => s.classList.remove('active'));
+
+  document.getElementById(id)
+    .classList.add('active');
+
+  window.scrollTo(0,0);
+}
+
+const data = [
+  {
+    soal:"Andi membantu temannya belajar tanpa meminta imbalan.",
+    pilihan:["Ikhlas","Riya"],
+    benar:0
+  },
+  {
+    soal:"Rina membersihkan kelas hanya ketika guru melihat.",
+    pilihan:["Ikhlas","Belum menunjukkan ikhlas"],
+    benar:1
+  },
+  {
+    soal:"Budi mengembalikan uang temannya meskipun tidak ada yang melihat.",
+    pilihan:["Ikhlas","Riya"],
+    benar:0
+  },
+  {
+    soal:"Seseorang bersedekah agar mendapatkan pujian.",
+    pilihan:["Ikhlas","Riya"],
+    benar:1
+  }
+];
+
+let nomor = 0;
+let nilai = 0;
+let sudahMenjawab = false;
+
+function tampilSoal() {
+  sudahMenjawab = false;
+
+  document.getElementById("hasil").innerHTML = "";
+  document.getElementById("soal").innerHTML =
+    data[nomor].soal;
+
+  let html = "";
+
+  data[nomor].pilihan.forEach((p,i) => {
+    html += `<button class="option"
+      onclick="jawab(${i},this)">
+      ${p}
+    </button>`;
+  });
+
+  document.getElementById("pilihan").innerHTML = html;
+}
+
+function jawab(i,tombol) {
+  if(sudahMenjawab) return;
+  sudahMenjawab = true;
+
+  const benar = data[nomor].benar;
+
+  if(i === benar) {
+    nilai += 25;
+    tombol.classList.add("correct");
+    document.getElementById("hasil").innerHTML =
+      "Benar! Hebat, pertahankan!";
+  } else {
+    tombol.classList.add("wrong");
+    document.getElementById("hasil").innerHTML =
+      "Belum tepat. Ayo pelajari kembali materinya!";
+  }
+
+  document.getElementById("skor").innerHTML =
+    "Skor: " + nilai;
+
+  document.querySelectorAll("#pilihan button")
+    .forEach(b => b.disabled = true);
+}
+
+function berikutnya() {
+  if(!sudahMenjawab) {
+    alert("Jawab soal terlebih dahulu!");
+    return;
+  }
+
+  nomor++;
+
+  if(nomor >= data.length) {
+    document.getElementById("soal").innerHTML =
+      "Game selesai!";
+
+    document.getElementById("pilihan").innerHTML = "";
+    document.getElementById("hasil").innerHTML =
+      "Nilai akhir kamu: " + nilai;
+
+    return;
+  }
+
+  tampilSoal();
+}
+
+tampilSoal();
+</script>
+
+</body>
+</html>
